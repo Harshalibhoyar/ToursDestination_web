@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 5%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.social-media {
+  margin: 0 auto 0 50px;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+.social-media a:hover {
+  background: #fff;
+}
+
+.social-media a i {
+  font-size: 20px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.social-media a:hover i {
+  color: #444;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 30px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+
+.slide.active {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.left-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.slide.active .left-info {
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.penetrate-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  -webkit-mask: linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0);
+  padding-right: 0px;
+}
+
+.penetrate-blur h1 {
+    font-size: 250px;
+    background: inherit;
+    background-clip: text;
+    z-index: 2;
+    color: transparent;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.1); */
+    
+
+}
+.slide-china  .penetrate-blur h1{
+    background-image: url('china.jpg.jpg'); /* Replace with the correct path */
+}
+
+.slide-Japan  .penetrate-blur h1{
+     background-image: url('japan.jpg.jpg');/* Replace with the correct path */
+}
+
+.slide-Africa  .penetrate-blur h1{
+    background-image: url('africa.jpg.jpg'); /* Replace with the correct path */
+}
+
+.slide-brazil  .penetrate-blur h1{
+    background-image: url('brazil.jpg.jpg'); /* Replace with the correct path */
+}
+
+.slide-serbia  .penetrate-blur h1{
+    background-image: url('serbia.jpg.jpg'); /* Replace with the correct path */
+}
+/* .penetrate-blur h1 {
+        font-size: 250px;
+        color: #fff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    } */
+
+.left-info .content {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  color: #fff;
+}
+
+.content h3 {
+  font-size: 20px;
+}
+
+.content p {
+  font-size: 16px;
+  margin: 10px 0 15px;
+}
+
+.content .btn {
+  display: inline-block;
+  padding: 13px 28px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #444;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.content .btn:hover {
+  background: transparent;
+  color: #fff;
+}
+
+.right-info {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+}
+
+.slide.active .right-info {
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.right-info h1 {
+  font-size: 250px;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.right-info h3 {
+  font-size: 80px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-left: 13px;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 8%;
+  right: 5%;
+  z-index: 99;
+}
+
+.navigation span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  margin-left: 25px;
+  transition: 0.5s;
+}
+
+.navigation span:nth-child(1) {
+  background: transparent;
+}
+
+.navigation span:nth-child(1):hover {
+  background: #fff;
+}
+
+.navigation span i {
+  font-size: 45px;
+  color: #444;
+  transition: 0.5s;
+}
+
+.navigation span:nth-child(1) i {
+  color: #fff;
+}
